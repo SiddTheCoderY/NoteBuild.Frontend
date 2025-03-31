@@ -32,7 +32,7 @@ function CreateNewCollection({ onClose , addNewCollection }) { // Accept onClose
   try {
     setLoading(true);
     console.log('Sending Request with data', formData);
-    const response = await axios.post('http://localhost:8000/api/c/upload-collection', formData, { 
+    const response = await axios.post('https://notebuild-backend.onrender.com/api/c/upload-collection', formData, { 
       withCredentials: true, 
       headers: { 'Content-Type': 'multipart/form-data' } 
     });

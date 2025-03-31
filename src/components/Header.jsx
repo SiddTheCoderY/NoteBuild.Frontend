@@ -12,7 +12,7 @@ function Header() {
    const getCurrentUser = async () => {
     try {
       // console.log('Requesting to Get Current User from header')
-      const response = await axios.get('http://localhost:8000/api/user/get-current-user', {
+      const response = await axios.get('https://notebuild-backend.onrender.com/api/user/get-current-user', {
         withCredentials : true
       })
       // console.log('Request Accepted to Get Current User',response)

@@ -9,7 +9,7 @@ function SureWantTo({ collectionId, closeConfirmBox , refreshCollections }) {
   const deleteCollection = async (collectionId) => {
     try {
       console.log('Requestiong to Delete the Collection ', collectionId)
-      const response = await axios.post(`http://localhost:8000/api/c/delete-collection/${collectionId}`,
+      const response = await axios.post(`https://notebuild-backend.onrender.com/api/c/delete-collection/${collectionId}`,
         {},
         { withCredentials : true})
       console.log('Request Accepted to Delete the Collection ', response)

@@ -32,7 +32,7 @@ function Login() {
     try {
       setLoading(true);
       console.log('Sending Login Request:', userCredentials);
-      const response = await axios.post('http://localhost:8000/api/user/login-user', userCredentials, {withCredentials : true});
+      const response = await axios.post('https://notebuild-backend.onrender.com/api/user/login-user', userCredentials, {withCredentials : true});
       console.log('Login Response received:', response);
       setData(response.data.data.user);
       if (response.statusText == 'OK' || response.status == 200 || response.status == 201) {

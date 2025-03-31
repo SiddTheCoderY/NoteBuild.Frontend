@@ -23,7 +23,7 @@ function Collection() {
   
   const getCurrentUser = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/api/user/get-current-user', {
+      const response = await axios.get('https://notebuild-backend.onrender.com/api/user/get-current-user', {
         withCredentials : true
       })
       setCurrentUser(response.data.data)
@@ -36,7 +36,7 @@ function Collection() {
   const getCollections = async (userId) => {
     try {
       setLoading(true)
-      const response = await axios.get(`http://localhost:8000/api/c/get-user-collections/${userId}`)
+      const response = await axios.get(`https://notebuild-backend.onrender.com/api/c/get-user-collections/${userId}`)
       withCredentials: true // Sends cookies automatically
       setCollections(response.data.data.collections)
       console.log('Collection : ',response.data.data.collections )

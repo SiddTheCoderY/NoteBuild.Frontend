@@ -28,7 +28,7 @@ function Register() {
     try {
       setLoading(true);
       console.log('Sending Request:', userCredentials);
-      const response = await axios.post('/api/user/register-user', userCredentials);
+      const response = await axios.post('https://notebuild-backend.onrender.com/api/user/register-user', userCredentials);
       console.log('Response received:', response);
       setData(response.data.data);
       if (response.statusText == 'OK' || response.status == 200 || response.status == 201) {
